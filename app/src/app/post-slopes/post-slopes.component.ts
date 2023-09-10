@@ -11,8 +11,14 @@ export class PostSlopesComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.loadPost(5).subscribe((value) => {
-      console.log(value);
+    this.apiService.loadPost(5).subscribe({
+      next: (value) => {
+        console.log(value);
+      },
+      error: (err) => {
+        console.error(err)
+      }
+      
     })
   }
 
