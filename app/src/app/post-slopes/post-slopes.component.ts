@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Ipost } from '../interfaces/post';
 
 @Component({
   selector: 'app-post-slopes',
@@ -8,11 +9,14 @@ import { ApiService } from '../api.service';
 })
 export class PostSlopesComponent implements OnInit {
 
+  posts: Ipost[] | null = null;
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.apiService.loadPost(5).subscribe({
       next: (value) => {
+        this.posts = value;
         console.log(value);
       },
       error: (err) => {

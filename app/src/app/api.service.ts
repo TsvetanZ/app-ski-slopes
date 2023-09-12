@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient } from '@angular/common/http';
 import {environment} from '../environments/environment';
+import { IskiSlopes } from './interfaces/skiSlopes';
+import { Ipost } from './interfaces/post';
 
 const apiURL = environment.apiURL;
 
@@ -13,11 +15,11 @@ export class ApiService {
 
 
   loadSkislopes() {
-    return this.httpClient.get(`${apiURL}/slopes`);
+    return this.httpClient.get<IskiSlopes[]>(`${apiURL}/slopes`);
 
   }
 
   loadPost (limit?:number) {
-    return this,this.httpClient.get(`${apiURL}/posts${limit? `?limit=${limit}` : '' }`);
+    return this.httpClient.get<Ipost[]>(`${apiURL}/posts${limit? `?limit=${limit}` : '' }`);
   }
 }

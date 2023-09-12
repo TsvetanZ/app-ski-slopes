@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { lastValueFrom } from 'rxjs';
+import { IskiSlopes } from '../interfaces/skiSlopes';
 
 @Component({
   selector: 'app-ski-slopes',
@@ -9,12 +9,15 @@ import { lastValueFrom } from 'rxjs';
 })
 export class SkiSlopesComponent implements OnInit {
 
+  skiSlopes: IskiSlopes[] | null = null;
+
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.apiService.loadSkislopes().subscribe({
-      next(value) {
-        console.log(value);
+      next:(value) => {
+        this.skiSlopes = value;
       },
       error(err) {
         console.error(err);

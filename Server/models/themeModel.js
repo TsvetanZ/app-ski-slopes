@@ -15,6 +15,12 @@ const themeSchema = new mongoose.Schema({
             message: 'Block image is not valid'
         }
     },
+    text: {
+        type: String,
+        required: true,
+        minlength:[10, 
+            'Text must at least 10 characters long'],
+    },
     subscribers: [{
         type: ObjectId,
         ref: "User"

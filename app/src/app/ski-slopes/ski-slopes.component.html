@@ -1,21 +1,23 @@
-<div class="col-md-9">
-    <div *ngFor="let slope for slopes" class="feature-post small-blog">
+<h1>Radina</h1>
+
+<div *ngFor="let slope of skiSlopes" class="col-md-9">
+    <div class="feature-post small-blog">
        <div class="col-md-5">
           <div class="feature-img">
              <img src="images/post2.png" class="img-responsive" alt="#" />
           </div>
        </div>
-       <div class="col-md-7">
+       <div  class="col-md-7">
           <div class="feature-cont">
              <div class="post-info">
-                <img src="images/profile-img.png" alt="#" />
+                <img src={{slope.imageUrl}} alt="#" />
                 <span>
-                   <h4>by George Kvasnikov</h4>
-                   <h5>on Jun 27, 2014</h5>
+                   <h4>{{slope.userId.username}}</h4>
+                   <h5>{{slope.created_at}}</h5>
                 </span>
              </div>
              <div class="post-heading">
-                <h3>We denounce with righteous indignation and dislike men who are so beguiled</h3>
+                <h3>{{slope.themeName}}</h3>
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
                  et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est 
                  laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
@@ -27,3 +29,5 @@
        </div>
     </div>
  </div>
+
+ <h1>Radina end</h1>
