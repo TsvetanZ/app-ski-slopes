@@ -1,3 +1,5 @@
+<div *ngIf="errorFetchingData">Error loading post ski slopes</div>
+<app-loader *ngIf="!posts"></app-loader>
 <div class="col-lg-8 col-sm-8 col-xs-12">
     <div class="news-post-holder">
        <div *ngFor="let post of posts"  class="news-post-widget">

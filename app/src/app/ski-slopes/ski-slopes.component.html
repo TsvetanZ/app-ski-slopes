@@ -1,5 +1,6 @@
 <h1>Radina</h1>
-
+<div *ngIf="errorFetchingData">Error loading ski slopes</div>
+<app-loader *ngIf="!skiSlopes"></app-loader>
 <div *ngFor="let slope of skiSlopes" class="col-md-9">
     <div class="feature-post small-blog">
        <div class="col-md-5">

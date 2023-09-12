@@ -10,7 +10,7 @@ import { IskiSlopes } from '../interfaces/skiSlopes';
 export class SkiSlopesComponent implements OnInit {
 
   skiSlopes: IskiSlopes[] | null = null;
-
+  errorFetchingData = false;
 
   constructor(private apiService: ApiService) { }
 
@@ -19,7 +19,8 @@ export class SkiSlopesComponent implements OnInit {
       next:(value) => {
         this.skiSlopes = value;
       },
-      error(err) {
+      error:(err) => {
+        this.errorFetchingData = true;
         console.error(err);
       },
     })
