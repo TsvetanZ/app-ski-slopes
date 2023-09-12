@@ -10,6 +10,7 @@ import { Ipost } from '../interfaces/post';
 export class PostSlopesComponent implements OnInit {
 
   posts: Ipost[] | null = null;
+  errorFetchingData= false;
 
   constructor(private apiService: ApiService) { }
 
@@ -20,6 +21,7 @@ export class PostSlopesComponent implements OnInit {
         console.log(value);
       },
       error: (err) => {
+        this.errorFetchingData = true;
         console.error(err)
       }
       
