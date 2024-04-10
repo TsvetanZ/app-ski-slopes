@@ -9,6 +9,8 @@ import { PostSlopesComponent } from './post-slopes/post-slopes.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,14 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, //MyModule.withProviders()
     CoreModule,
     HttpClientModule,
     SharedModule,
+    BrowserAnimationsModule,
+    AuthModule,
+  
+    
     
   ],
   providers: [],

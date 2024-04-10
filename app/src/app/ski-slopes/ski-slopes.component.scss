@@ -5,7 +5,9 @@ article {
     width: 700px;
     height: 400px;
     list-style: none;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    background-color:rgb(117, 227, 227);
   
 
     h3 {
@@ -61,11 +63,20 @@ p {
    margin-bottom: 40px;
 }
 
-.description_more {
+ul .description_more{
+    margin-top: 40px;
     text-align: center;
-    background-color: red;
-    padding: 10px 10px;
-    border: 2px solid red;
+
+a {
     
+    font-size: 13px;
+    background-color: red;
+    padding: 10px 40px ;
+    border-radius: 50px;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 }
 

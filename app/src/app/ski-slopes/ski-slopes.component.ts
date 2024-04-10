@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { IskiSlopes } from '../interfaces/skiSlopes';
+import { IskiSlopes } from '../interfaces';
 
 @Component({
   selector: 'app-ski-slopes',
