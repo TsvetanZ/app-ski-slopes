@@ -1,34 +1,37 @@
-<h1>Radina</h1>
+
 <div *ngIf="errorFetchingData">Error loading ski slopes</div>
 <app-loader *ngIf="!skiSlopes"></app-loader>
-<div *ngFor="let slope of skiSlopes" class="col-md-9">
-    <div class="feature-post small-blog">
-       <div class="col-md-5">
-          <div class="feature-img">
-             <img src="images/post2.png" class="img-responsive" alt="#" />
-          </div>
-       </div>
-       <div  class="col-md-7">
-          <div class="feature-cont">
-             <div class="post-info">
-                <img src={{slope.imageUrl}} alt="#" />
-                <span>
-                   <h4>{{slope.userId.username}}</h4>
-                   <h5>{{slope.created_at}}</h5>
-                </span>
-             </div>
-             <div class="post-heading">
-                <h3>{{slope.themeName}}</h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
-                 et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est 
-                 laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-                <div class="full">
-                   <a class="btn" href="#">Read More</a>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </div>
 
- <h1>Radina end</h1>
+
+ <article *ngFor="let slope of skiSlopes">
+   <h3>{{slope.themeName}}v</h3>
+   <div class="gridcontainer">
+   <div class="img">
+       <img class="img__img" src="{{slope.imageUrl}}" alt="">
+      
+   </div>
+   <div class="containet">
+   
+       <ul class="description">
+           <li class="description evaluation"> Evalution 
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star"></span>
+               <span class="fa fa-star"></span>
+           </li>
+           <li class="description difficult">Difficulty level: Begginers, Easy, Intermediate, Hard </li>
+           <li class="description length">1500 m</li>
+           <li class="description lift">Ski Lift: Chairlifts, Drag Lifts, Gondolas</li>
+           <li class="desctination">Europe>>Bulgaria>><span>Vitosha</span></li>
+           <li class="description_more"><a href="http://">More</a></li>
+       </ul>
+
+   </div>
+</div>
+<div class="author">
+
+<h4>{{slope.userId.username}}</h4>
+<p>{{slope.created_at}}</p>
+</div>
+</article>

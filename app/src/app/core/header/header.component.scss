@@ -9,11 +9,42 @@
     text-decoration: none;
   }
 
-  header {
-    background-color: rgba(144, 176, 214, 0.83);
-    width: 90%;
-    margin:auto;
+//   header #header {
+//     left: 50%;
+//     right: 50%;
+    
+//   }
+
+  .main_2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: o;
+    bottom: 0;
+    object-fit:cover;
   }
+
+
+  #header {
+    background-color: rgba(144, 176, 214, 0.83);
+    position: absolute;
+    top: 1%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+//   header {
+//     background-color: rgba(144, 176, 214, 0.83);
+//     width: 90%;
+//     margin:auto;
+//     position: absolute;
+//     top: 0 px;
+//     border: 1px solid rgb(175, 14, 116);
+//   }
 
 
 img {
