@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { IUserId } from '../interfaces';
+import { Iuser } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  user : IUserId | null = null ;
+  user : Iuser | null = null ;
 
   get isLoggetIn () {
     return this.user !== null; 
