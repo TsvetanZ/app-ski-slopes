@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SkiSlopesComponent } from './ski-slopes/ski-slopes.component';
 import { PostSlopesComponent } from './post-slopes/post-slopes.component';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,21 +17,18 @@ import { AuthModule } from './auth/auth.module';
     AppComponent,
     SkiSlopesComponent,
     PostSlopesComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule, //MyModule.withProviders()
+    AuthModule,
+    AppRoutingModule,
+    BrowserModule, //MyModule.withProviders()
     CoreModule,
     HttpClientModule,
     SharedModule,
     BrowserAnimationsModule,
-    AuthModule,
-  
-    
-    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

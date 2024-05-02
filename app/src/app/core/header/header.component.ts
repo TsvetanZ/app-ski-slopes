@@ -13,6 +13,10 @@ export class HeaderComponent {
     return  this.autService.isLoggetIn;
   }
 
+  get user () {
+    return this.autService.user;
+  }
+
   constructor(private autService: AuthService, private router: Router) { }
 
 

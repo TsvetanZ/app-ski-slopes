@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mainbox {
+  position: relative;
+  text-align: center;
+  display: block;
+  box-shadow: inset -50px -50px 100px rgb(196, 184, 186);  
+
+}
+  
+    
+    img {
+      object-fit:cover;
+      width: 100%;
+    }
+
+  .container_not-found {
+    position:absolute;
+    text-align: center;
+    width: 100%;
+    top: 5rem;
+    display: block;
+    // box-shadow: inset -50px -50px 100px rgb(196, 184, 186);  
+    
+    // box-shadow: inset -50px -50px 100px pink;
+  
+    }
+
+   p, h2, h4, h1 {
+    font-family: Roboto ;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(121, 146, 223, 0.8);
+  }
+
+  h1 {
+    font-family: Roboto ;
+    font-weight: bold;
+      color: rgb(5, 36, 52);
+      font-size: 15rem;
+      padding-bottom: 60px;
+      color: #000; /* Fallback for older browsers */
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+  }
+
+  h2{
+    font-size: 6rem;
+    color: rgba(66, 73, 91, 0.8);
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  p{
+    margin-bottom: 2rem;
+  }
+
+
